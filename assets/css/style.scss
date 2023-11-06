@@ -1,0 +1,149 @@
+---
+---
+
+@import "jekyll-theme-primer";
+
+div#indexicons {
+	margin-top: 2.5em;
+	margin-bottom: 2em;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+div#indexicons div.icon {
+	display: flex;
+	flex-direction: column;
+	max-width: 10em;
+	align-items: center;
+	align-content: stretch;
+}
+
+div#indexicons div.icon img {
+	width: 3em;
+}
+
+div#indexicons div.icon div {
+	text-align: center;
+	font-weight: bold;
+	margin-top: 1em;
+}
+
+div#indexicons div.icon p {
+	text-align: center;
+	margin-top: 1em;
+}
+
+div#indextable {
+	margin-bottom: 2em;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+div#indextable div.row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+div#indextable div.row img {
+	width: 2em;
+	height: 2em;
+	margin: 0.5em;
+	margin-left: 1em;
+}
+
+div#indextable div.row p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: 0.5em;
+}
+
+div.linkmenu {
+	float: right;
+}
+
+div.titleflex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-bottom: 2em;
+	align-items: center;
+	justify-content: space-between;
+
+	> span.logo {
+		max-width: 12em;
+	}
+
+	> span.links {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		> a {
+			display: inline-block;
+			padding: 0.75em;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	div.titleflex {
+		justify-content: center;
+
+		> span.logo {
+			flex-basis: 100%;
+		}
+
+		> span.links {
+			margin-top: 1em;
+			flex-basis: 100%;
+			justify-content: center;
+
+			> a {
+				padding: 0.35em;
+			}
+		}
+	}
+}
+
+.markdown-body {
+	-webkit-font-smoothing: antialiased;
+}
+
+div.blogpost {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 100px minmax(200px, 1fr);
+
+	margin-bottom: 1em;
+}
+
+div.blogpost div#date div#day {
+	font-size: 2.25em;
+	text-align: center;
+	margin-top: 0.1em;
+}
+
+div.blogpost div#date div#month {
+	font-size: 0.6em;
+	text-align: center;
+	text-transform: uppercase;
+
+	position: relative;
+	top: -1em;
+}
+
+div.blogpost div#overview div#title {
+	margin-top: 0.75em;
+}
+
+div.blogpost div#overview div#excerpt {
+	padding-top: 0.2em;
+	color: #444444;
+	text-decoration: none;
+	font-size: 1em;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% seo %}
+    {% feed_meta %}
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="alternate" type="application/atom+xml" title="Yggdrasil Network" href="/feed.xml">
+</head>
+
+<body>
+    <div class="container-lg px-3 my-5 markdown-body">
+        <div class='titleflex'>
+            <span class='logo'>
+                <a href="/"><img src="/assets/images/logo.svg" alt="Yggdrasil Network" id="logoimg" /></a>
+            </span>
+
+            <span class='logo'>
+                <a href="/"><img src="/assets/images/openwrt-logo-dark-blue.png" alt="Yggdrasil Network" id="logoimg" /></a>
+            </span>
+
+            <span class='links'>
+                {% for page in site.pages %}
+                {% if page.url contains ".html" %}
+                {% unless page.tags contains "dontlink" %}
+                <a href="{{ page.url }}"><span class="underline">(</span>{{ page.title }}<span class="underline">)</span></a>
+                {% endunless %}
+                {% endif %}
+                {% endfor %}
+                <a href='https://github.com/yggdrasil-network/yggdrasil-go'><span class="underline">(</span>Code<span class="underline">)</span></a>
+            </span>
+        </div>
+        {{ content }}
+    </div>
+</body>
+
+</html>
