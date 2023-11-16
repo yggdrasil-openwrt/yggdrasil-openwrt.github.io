@@ -112,6 +112,12 @@ div.titleflex {
 
 .markdown-body {
 	-webkit-font-smoothing: antialiased;
+
+	img[alt=screencap] {
+		border: 10px solid #072342;
+		width: 98%;
+	}
+
 }
 
 div.blogpost {
